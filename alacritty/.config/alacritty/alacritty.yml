@@ -23,31 +23,31 @@
 # available, otherwise `xterm-256color` is used.
 #TERM: alacritty
 
-# window:
-# Window dimensions (changes require restart)
-#
-# Number of lines/columns (not pixels) in the terminal. The number of columns
-# must be at least `2`, while using a value of `0` for columns and lines will
-# fall back to the window manager's recommended size.
-#dimensions:
-#  columns: 0
-#  lines: 0
+window:
+  # Window dimensions (changes require restart)
+  #
+  # Number of lines/columns (not pixels) in the terminal. The number of columns
+  # must be at least `2`, while using a value of `0` for columns and lines will
+  # fall back to the window manager's recommended size.
+  dimensions:
+    columns: 133
+    lines: 40
 
-# Window position (changes require restart)
-#
-# Specified in number of pixels.
-# If the position is not set, the window manager will handle the placement.
-#position:
-#  x: 0
-#  y: 0
+  # Window position (changes require restart)
+  #
+  # Specified in number of pixels.
+  # If the position is not set, the window manager will handle the placement.
+  # position:
+  # x: 500
+  # y: 200
 
-# Window padding (changes require restart)
-#
-# Blank space added around the window in pixels. This padding is scaled
-# by DPI and the specified value is always added at both opposing sides.
-#padding:
-# x: 2
-# y: 2
+  # Window padding (changes require restart)
+  #
+  # Blank space added around the window in pixels. This padding is scaled
+  # by DPI and the specified value is always added at both opposing sides.
+  # padding:
+  # x: 50
+  # y: 50
 
 # Spread additional padding evenly around the terminal content.
 #dynamic_padding: false
@@ -61,7 +61,7 @@
 # Values for `decorations` (macOS only):
 #     - transparent: Title bar, transparent background and title bar buttons
 #     - buttonless: Title bar, transparent background and no title bar buttons
-#decorations: full
+decorations: none
 
 # Startup Mode (changes require restart)
 #
@@ -78,7 +78,7 @@
 #title: Alacritty
 
 # Allow terminal applications to change Alacritty's window title.
-#dynamic_title: true
+dynamic_title: true
 
 # Window class (Linux/BSD only):
 #class:
@@ -418,10 +418,10 @@
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
+shell:
+  program: /usr/bin/zsh
 #  args:
-#    - --login
+#  - --login
 
 # Startup directory
 #
