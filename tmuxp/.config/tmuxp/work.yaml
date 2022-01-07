@@ -4,22 +4,22 @@ windows:
     start_directory: ~/dev/docenttoday
     layout: main-vertical
     panes:
-      - shell_command: 
+      - shell_command:
           - clear
+          - code .
         focus: true
-      - shell_command: 
+      - shell_command:
           - cd graphql
           - clear
   - window_name: iridium
     start_directory: ~/dev/iridium
     layout: main-vertical
     panes:
-      - shell_command: 
+      - shell_command:
           - clear
   - window_name: uploadTestBackend
     start_directory: ~/dev/docenttoday/uploadTestBackend
     layout: main-vertical
     panes:
-      - shell_command: 
+      - shell_command:
           - clear
-  
