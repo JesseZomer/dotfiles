@@ -6,11 +6,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 startwork() {
-  tmuxp load work
+  tmuxinator start work
 }
 
 stopwork() {
-  tmux kill-session -t work
+  tmuxinator stop work
 }
 
 # If you come from bash you might have to change your $PATH.
@@ -18,7 +18,7 @@ stopwork() {
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/jesse/.oh-my-zsh"
-
+export EDITOR='code'
 bindkey -s ^f "tmux-sessionizer\n"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -117,6 +117,8 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias please="sudo"
+alias cat="batcat"
+alias ls="exa -lah"
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
