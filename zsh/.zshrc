@@ -17,7 +17,7 @@ stopwork() {
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh:$PATH"
+export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='code'
 bindkey -s ^f "tmux-sessionizer\n"
 
@@ -89,7 +89,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions)
 
-if [ ! -f $ZSH/oh-my-zsh.sh ]; then
+if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
 fi
 
@@ -123,7 +123,7 @@ alias please="sudo"
 alias cat="batcat"
 alias ls="exa -lah"
 
-if [ ! -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
