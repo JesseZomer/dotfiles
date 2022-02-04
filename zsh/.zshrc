@@ -17,7 +17,7 @@ stopwork() {
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/jesse/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh:$PATH"
 export EDITOR='code'
 bindkey -s ^f "tmux-sessionizer\n"
 
@@ -120,7 +120,9 @@ alias please="sudo"
 alias cat="batcat"
 alias ls="exa -lah"
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ ! -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
