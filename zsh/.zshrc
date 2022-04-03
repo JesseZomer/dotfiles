@@ -8,6 +8,8 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='code'
+export JAVA_HOME="$HOME/.jdks/temurin-17.0.2"
+export HISTFILE=~/.zsh_history
 
 source ~/.antigen/antigen.zsh
 
@@ -36,6 +38,7 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias please="sudo"
 alias cat="batcat"
 alias ls="exa -lah"
+alias vim="nvim"
 
 startwork() {
   tmuxinator start work
