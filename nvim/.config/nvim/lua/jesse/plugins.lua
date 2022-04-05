@@ -36,24 +36,29 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
---  use "numToStr/Comment.nvim" -- Easily comment stuff
---  use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
-  use "akinsho/bufferline.nvim"
+
+  use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- Comment stuf in right context. For example html in .ts file
+
+  use "nvim-lualine/lualine.nvim" -- Fancy status bar
+  use "kyazdani42/nvim-web-devicons" -- bijhorende icons voor lualine
+
+  -- use "kyazdani42/nvim-tree.lua"
+  -- use "akinsho/bufferline.nvim"
 --  use "moll/vim-bbye"
-  use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
+  -- use "akinsho/toggleterm.nvim"
 --  use "ahmedkhalf/project.nvim"
 --  use "lewis6991/impatient.nvim"
 --  use "lukas-reineke/indent-blankline.nvim"
 --  use "goolord/alpha-nvim"
+  -- Colorschemes
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
 
-  -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 --  use "lunarvim/darkplus.nvim"
-  use 'navarasu/onedark.nvim'
+  -- use 'navarasu/onedark.nvim'
+  use 'ful1e5/onedark.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -62,6 +67,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -81,7 +87,6 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
---  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
