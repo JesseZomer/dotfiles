@@ -39,6 +39,9 @@ alias please="sudo"
 alias cat="batcat"
 alias ls="exa -lah"
 alias vim="nvim"
+alias ssh="kitty +kitten ssh"
+
+. /usr/share/autojump/autojump.sh
 
 startwork() {
   tmuxinator start work
@@ -46,6 +49,24 @@ startwork() {
 
 stopwork() {
   tmuxinator stop work
+}
+
+# tmux integratie met autojump
+j() {
+    if [[ "$#" -ne 0 ]]; then
+        cd $(autojump $@)
+        return
+    fi
+    cd "$(autojump -s | sort -k1gr | awk '$1 ~ /[0-9]:/ && $2 ~ /^\// { for (i=2; i<=NF; i++) { print $(i) } }' |  fzf --height 40% --reverse --inline-info)" 
+}
+
+# checkout git branch (including remote branches), sorted by most recent commit, limit 30 last branches
+gch() {
+  local branches branch
+  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
 export DISABLE_AUTO_TITLE='true'
