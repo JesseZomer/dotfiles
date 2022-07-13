@@ -43,9 +43,9 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim" -- Fancy status bar
   use "kyazdani42/nvim-web-devicons" -- bijhorende icons voor lualine
 
-  -- use "kyazdani42/nvim-tree.lua"
-  -- use "akinsho/bufferline.nvim"
---  use "moll/vim-bbye"
+  use "kyazdani42/nvim-tree.lua"
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
   -- use "akinsho/toggleterm.nvim"
 --  use "ahmedkhalf/project.nvim"
 --  use "lewis6991/impatient.nvim"
