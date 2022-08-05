@@ -47,10 +47,9 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   -- use "akinsho/toggleterm.nvim"
---  use "ahmedkhalf/project.nvim"
 --  use "lewis6991/impatient.nvim"
 --  use "lukas-reineke/indent-blankline.nvim"
---  use "goolord/alpha-nvim"
+  use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
 
@@ -88,11 +87,30 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
 
+  -- Project management
+  use "ahmedkhalf/project.nvim"
+
   -- Git
   use "lewis6991/gitsigns.nvim"
   -- Kitty config highlighting
   use "fladson/vim-kitty"
 
+  -- Betere search
+  use {'kevinhwang91/nvim-hlslens'}
+  -- scrollbar + diagnostics
+  use("petertriho/nvim-scrollbar")
+
+  use("gpanders/editorconfig")
+
+use {
+  'rmagatti/auto-session',
+  config = function()
+    require('auto-session').setup {
+      log_level = 'info',
+      auto_session_suppress_dirs = {'~/', '~/Projects'}
+    }
+  end
+}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

@@ -1,0 +1,8 @@
+# /home/jesse/.config/tmuxinator/work.yml
+name: nvim
+root: ~/
+
+windows:
+  - config:
+      root: ~/dotfiles/nvim/.config/nvim/lua/jesse/
+      layout: main-vertical

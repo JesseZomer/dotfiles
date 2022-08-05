@@ -51,6 +51,10 @@ stopwork() {
   tmuxinator stop work
 }
 
+nvimconfig() {
+  tmuxinator start nvim
+}
+
 # tmux integratie met autojump
 j() {
     if [[ "$#" -ne 0 ]]; then
