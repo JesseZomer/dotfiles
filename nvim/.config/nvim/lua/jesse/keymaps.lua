@@ -28,7 +28,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- reset search highlight
-keymap("n", "<leader>/", ":nohlsearch", opts)
+keymap("n", "<leader>/", ":nohlsearch<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -40,7 +40,7 @@ keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>bp", ":BufferLinePick<CR>", opts)
-keymap("n", "<leader>bca", ":BufferLineCloseLeft<CR>:BuferLineCloseRight<CR>", opts)
+keymap("n", "<leader>bca", ":BufferLineCloseLeft<CR>:BufferLineCloseRight<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)

@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='code'
 export JAVA_HOME="$HOME/.jdks/temurin-17.0.2"
 export HISTFILE=~/.zsh_history
-
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 source ~/.antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
