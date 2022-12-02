@@ -3,3 +3,5 @@
 	email = jessezomer@hotmail.com
 [pull]
 	rebase = false
+[rerere]
+	enabled = true
