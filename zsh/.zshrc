@@ -11,6 +11,7 @@ export EDITOR='code'
 export JAVA_HOME="$HOME/.jdks/temurin-17.0.2"
 export HISTFILE=~/.zsh_history
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export CAPACITOR_ANDROID_STUDIO_PATH="/home/jesse/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/221.6008.13.2211.9514443/bin/studio.sh"
 source ~/.antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
@@ -74,15 +75,15 @@ gch() {
 }
 
 export DISABLE_AUTO_TITLE='true'
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 
