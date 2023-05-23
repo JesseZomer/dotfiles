@@ -8,7 +8,6 @@ return {
       sources = {
         nls.builtins.formatting.prettierd,
         nls.builtins.formatting.stylua,
-        nls.builtins.formatting.stylelint,
         nls.builtins.code_actions.eslint_d,
         nls.builtins.diagnostics.stylelint,
       },

@@ -7,7 +7,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR='code'
+export EDITOR='nvim'
 export JAVA_HOME="$HOME/.jdks/temurin-17.0.2"
 export HISTFILE=~/.zsh_history
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
@@ -43,14 +43,6 @@ alias vim="nvim"
 alias ssh="kitty +kitten ssh"
 
 . /usr/share/autojump/autojump.sh
-
-startwork() {
-  tmuxinator start work
-}
-
-stopwork() {
-  tmuxinator stop work
-}
 
 nvimconfig() {
   tmuxinator start nvim
