@@ -8,11 +8,11 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='nvim'
-export JAVA_HOME="$HOME/.jdks/temurin-17.0.2"
+export JAVA_HOME="/Users/jesse/Library/Java/JavaVirtualMachines/temurin-19.0.2/Contents/Home"
 export HISTFILE=~/.zsh_history
-export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
-export CAPACITOR_ANDROID_STUDIO_PATH="/home/jesse/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/221.6008.13.2211.9514443/bin/studio.sh"
-source ~/.antigen/antigen.zsh
+export KUBECONFIG=~/.kube/config:~/.kube/onderwijs-intern.kubeconfig
+
+source /opt/homebrew/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -37,12 +37,11 @@ antigen apply
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias please="sudo"
-alias cat="batcat"
-alias ls="exa -lah"
+alias cat="bat"
+alias ls="eza -lah"
 alias vim="nvim"
-alias ssh="kitty +kitten ssh"
 
-. /usr/share/autojump/autojump.sh
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 nvimconfig() {
   tmuxinator start nvim
@@ -74,8 +73,15 @@ export DISABLE_AUTO_TITLE='true'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
 
+# bun completions
+[ -s "/Users/jesse/.bun/_bun" ] && source "/Users/jesse/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
